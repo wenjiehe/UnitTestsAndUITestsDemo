@@ -26,7 +26,32 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3D3BA13123D374410023E6FF"
+            BuildableName = "UnitTestsAndUITestsDemoTests.xctest"
+            BlueprintName = "UnitTestsAndUITestsDemoTests"
+            ReferencedContainer = "container:UnitTestsAndUITestsDemo.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3D3BA13C23D374410023E6FF"
+            BuildableName = "UnitTestsAndUITestsDemoUITests.xctest"
+            BlueprintName = "UnitTestsAndUITestsDemoUITests"
+            ReferencedContainer = "container:UnitTestsAndUITestsDemo.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3D3BA11623D3743A0023E6FF"
+            BuildableName = "UnitTestsAndUITestsDemo.app"
+            BlueprintName = "UnitTestsAndUITestsDemo"
+            ReferencedContainer = "container:UnitTestsAndUITestsDemo.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">

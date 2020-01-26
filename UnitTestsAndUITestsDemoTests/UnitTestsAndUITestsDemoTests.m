@@ -18,6 +18,7 @@
 /// 每个类中测试方法调用前，先调用这个方法以便开发者做些测试前的准备
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
 }
 
 /// 当这个类中的所有测试方法测试完后，会调用这个方法，释放测试用例的资源代码
