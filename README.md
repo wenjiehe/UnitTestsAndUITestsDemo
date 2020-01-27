@@ -1,5 +1,12 @@
 # UnitTestsAndUITestsDemo
 
+## 编译环境
+
+* Xcode 11.3.1
+
+* Mac OS 10.15.2
+
+* Objective-C 2.0
 
 ## 简介
 
@@ -7,9 +14,9 @@
 
 经常与单元测试联系起来的另外一些开发活动包括代码走读（`Code review`），静态分析（`Static analysis`）和动态分析（`Dynamic analysis`）。静态分析就是对软件的源代码进行研读，查找错误或收集一些度量数据，并不需要对代码进行编译和执行。动态分析就是通过观察软件运行时的动作，来提供执行跟踪，时间分析，以及测试覆盖度方面的信息。
 
-XCTest是苹果自带的测试框架
+XCTest是苹果自带的测试框架。
 
-UITests是通过代码化来实现自动点击界面，输入文字等功能。这样解决了大量靠人工操作的测试方式，尤其是需要话费相当多的时间来进行回归测试及环境切换测试。
+UITests是通过代码化来实现自动点击界面，输入文字等功能。这样解决了大量靠人工操作的测试方式，尤其是需要花费相当多时间的回归测试。
 
 1. Unit Tests
 
@@ -17,15 +24,22 @@ UITests是通过代码化来实现自动点击界面，输入文字等功能。�
     
     - 可以在单元测试类中编写单独的测试用例方法，这些方法与普通的方法类似，但是方法名称必须以`test`开发，且不能有参数，不然不会识别为测试方法。
     
-    - 单元调试操作，两种方法，按快捷键Command + U进行全部单元测试。
+    - 单元调试操作，两种方法，按快捷键Command + U进行全部单元测试。也可单独点击播放按钮进行测试
     
-    - 也可在Show the Test navigator中点击测试方法的播放按钮
+    - 测试通过会有一个绿色的钩，没通过的是一个红色的叉。
 
 2. UI Tests
 
+    - 测试UI点击、输入事件、赋值、双击、页面的滚动
+    
+    - 可以录制操作过程，将光标放在自定义的测试方法中，可以点击`Debug`调试区的红色圆点，程序就会自动启动，这时间在程序中所有的操作都会生成相应的代码，并将代码放到所选的测试方法内。录制的代码不一定正确，需要自行调整
+    
+    - `XCUIApplication *app = [[XCUIApplication alloc] init];`和`[app launch];`可以获取当前界面的元素。
+
 3. 测试方法
 
-```
+```Objective-C
+///Unit Tests方法
 /// 每个类中测试方法调用前，先调用这个方法以便开发者做些测试前的准备
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -52,6 +66,42 @@ UITests是通过代码化来实现自动点击界面，输入文字等功能。�
 }
 ```
 
+```Objective-C
+///UI Tests方法
+- (void)setUp {
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+
+    // In UI tests it is usually best to stop immediately when a failure occurs.
+    //如果发生测试不通过的情况，最好停止程序的运行。
+    self.continueAfterFailure = NO;
+
+    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+}
+
+- (void)tearDown {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+}
+
+- (void)testExample {
+    // UI tests must launch the application that they test.
+    //UI测试必须等应用先开启
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+            [app launch];
+    
+    // Use recording to get started writing UI tests.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
+- (void)testLaunchPerformance {
+    if (@available(macOS 10.15, iOS 13.0, tvOS 13.0, *)) {
+        // This measures how long it takes to launch your application.
+        [self measureWithMetrics:@[XCTOSSignpostMetric.applicationLaunchMetric] block:^{
+            [[[XCUIApplication alloc] init] launch];
+        }];
+    }
+}
+```
+
 4. 代码覆盖率
 
 `Code Coverage`是一个计算你的单元测试覆盖率的工具。在运行测试之前，我们需确认`Code Coverage`是否被打开，默认是关闭状态，所以需编辑`Edit scheme... -> Test -> Options -> Gather coverage for (勾选，这里可以选择部分targets)`，然后我们就使用`Command + U`运行所有测试类，编译成功后，就可以在`Show the Report navigator`中的`Coverage`中看到对应的targets，可以看到类文件及类文件里面的方法列表，并展示所有的测试覆盖情况。双击方法的名称，Xcode会打开类的代码，并且看到`Code Coverage`的情况，及代码的执行次数。
@@ -61,6 +111,10 @@ UITests是通过代码化来实现自动点击界面，输入文字等功能。�
 ![Code Coverage](https://github.com/wenjiehe/UnitTestsAndUITestsDemo/blob/master/UnitTestsAndUITestsDemo/CodeCoverage.png)
 
 ## XCTest框架及API介绍
+
+```Objective-C
+
+```
 
 ## 参考资料
 
