@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		3D3BA11C23D3743A0023E6FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA11B23D3743A0023E6FF /* AppDelegate.m */; };
 		3D3BA11F23D3743A0023E6FF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA11E23D3743A0023E6FF /* SceneDelegate.m */; };
-		3D3BA12223D3743A0023E6FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA12123D3743A0023E6FF /* ViewController.m */; };
 		3D3BA12523D3743A0023E6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3BA12323D3743A0023E6FF /* Main.storyboard */; };
 		3D3BA12723D374410023E6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D3BA12623D374410023E6FF /* Assets.xcassets */; };
 		3D3BA12A23D374410023E6FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3BA12823D374410023E6FF /* LaunchScreen.storyboard */; };
 		3D3BA12D23D374410023E6FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA12C23D374410023E6FF /* main.m */; };
 		3D3BA13723D374410023E6FF /* UnitTestsAndUITestsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA13623D374410023E6FF /* UnitTestsAndUITestsDemoTests.m */; };
 		3D3BA14223D374410023E6FF /* UnitTestsAndUITestsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA14123D374410023E6FF /* UnitTestsAndUITestsDemoUITests.m */; };
+		3DEC64F523E03FF3006867A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEC64F223DEF0A8006867A6 /* XCTest.framework */; };
+		3DEC64F623E03FFB006867A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEC64F223DEF0A8006867A6 /* XCTest.framework */; };
+		3DEC64FE23E066C2006867A6 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC64FD23E066C2006867A6 /* MyTableViewController.m */; };
+		3DEC650123E066DE006867A6 /* ServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC650023E066DE006867A6 /* ServiceTableViewController.m */; };
+		3DEC650423E066F0006867A6 /* QRCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC650323E066F0006867A6 /* QRCodeTableViewController.m */; };
+		3DEC650723E066FF006867A6 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC650623E066FF006867A6 /* HomeTableViewController.m */; };
+		3DEC650A23E0671F006867A6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC650923E0671F006867A6 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +47,6 @@
 		3D3BA11B23D3743A0023E6FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3D3BA11D23D3743A0023E6FF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		3D3BA11E23D3743A0023E6FF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		3D3BA12023D3743A0023E6FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3D3BA12123D3743A0023E6FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D3BA12423D3743A0023E6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D3BA12623D374410023E6FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D3BA12923D374410023E6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +58,18 @@
 		3D3BA13D23D374410023E6FF /* UnitTestsAndUITestsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestsAndUITestsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3BA14123D374410023E6FF /* UnitTestsAndUITestsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTestsAndUITestsDemoUITests.m; sourceTree = "<group>"; };
 		3D3BA14323D374410023E6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DEC64F223DEF0A8006867A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3DEC64F423E02934006867A6 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		3DEC64FC23E066C2006867A6 /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		3DEC64FD23E066C2006867A6 /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		3DEC64FF23E066DE006867A6 /* ServiceTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceTableViewController.h; sourceTree = "<group>"; };
+		3DEC650023E066DE006867A6 /* ServiceTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceTableViewController.m; sourceTree = "<group>"; };
+		3DEC650223E066F0006867A6 /* QRCodeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeTableViewController.h; sourceTree = "<group>"; };
+		3DEC650323E066F0006867A6 /* QRCodeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeTableViewController.m; sourceTree = "<group>"; };
+		3DEC650523E066FF006867A6 /* HomeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		3DEC650623E066FF006867A6 /* HomeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		3DEC650823E0671F006867A6 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3DEC650923E0671F006867A6 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEC64F523E03FF3006867A6 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEC64F623E03FFB006867A6 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +106,7 @@
 				3D3BA13523D374410023E6FF /* UnitTestsAndUITestsDemoTests */,
 				3D3BA14023D374410023E6FF /* UnitTestsAndUITestsDemoUITests */,
 				3D3BA11823D3743A0023E6FF /* Products */,
+				3DEC64F123DEF0A8006867A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,12 +123,15 @@
 		3D3BA11923D3743A0023E6FF /* UnitTestsAndUITestsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3DEC64F923E066A1006867A6 /* Home(首页) */,
+				3DEC64F823E066A1006867A6 /* QRCode(乘车) */,
+				3DEC64FA23E066A1006867A6 /* Service(服务) */,
+				3DEC64FB23E066A2006867A6 /* My(我的) */,
+				3DEC64F723E066A1006867A6 /* Login */,
 				3D3BA11A23D3743A0023E6FF /* AppDelegate.h */,
 				3D3BA11B23D3743A0023E6FF /* AppDelegate.m */,
 				3D3BA11D23D3743A0023E6FF /* SceneDelegate.h */,
 				3D3BA11E23D3743A0023E6FF /* SceneDelegate.m */,
-				3D3BA12023D3743A0023E6FF /* ViewController.h */,
-				3D3BA12123D3743A0023E6FF /* ViewController.m */,
 				3D3BA12323D3743A0023E6FF /* Main.storyboard */,
 				3D3BA12623D374410023E6FF /* Assets.xcassets */,
 				3D3BA12823D374410023E6FF /* LaunchScreen.storyboard */,
@@ -124,6 +146,7 @@
 			children = (
 				3D3BA13623D374410023E6FF /* UnitTestsAndUITestsDemoTests.m */,
 				3D3BA13823D374410023E6FF /* Info.plist */,
+				3DEC64F423E02934006867A6 /* TestPlan.xctestplan */,
 			);
 			path = UnitTestsAndUITestsDemoTests;
 			sourceTree = "<group>";
@@ -135,6 +158,59 @@
 				3D3BA14323D374410023E6FF /* Info.plist */,
 			);
 			path = UnitTestsAndUITestsDemoUITests;
+			sourceTree = "<group>";
+		};
+		3DEC64F123DEF0A8006867A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DEC64F223DEF0A8006867A6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DEC64F723E066A1006867A6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3DEC650823E0671F006867A6 /* LoginViewController.h */,
+				3DEC650923E0671F006867A6 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3DEC64F823E066A1006867A6 /* QRCode(乘车) */ = {
+			isa = PBXGroup;
+			children = (
+				3DEC650223E066F0006867A6 /* QRCodeTableViewController.h */,
+				3DEC650323E066F0006867A6 /* QRCodeTableViewController.m */,
+			);
+			path = "QRCode(乘车)";
+			sourceTree = "<group>";
+		};
+		3DEC64F923E066A1006867A6 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				3DEC650523E066FF006867A6 /* HomeTableViewController.h */,
+				3DEC650623E066FF006867A6 /* HomeTableViewController.m */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		3DEC64FA23E066A1006867A6 /* Service(服务) */ = {
+			isa = PBXGroup;
+			children = (
+				3DEC64FF23E066DE006867A6 /* ServiceTableViewController.h */,
+				3DEC650023E066DE006867A6 /* ServiceTableViewController.m */,
+			);
+			path = "Service(服务)";
+			sourceTree = "<group>";
+		};
+		3DEC64FB23E066A2006867A6 /* My(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				3DEC64FC23E066C2006867A6 /* MyTableViewController.h */,
+				3DEC64FD23E066C2006867A6 /* MyTableViewController.m */,
+			);
+			path = "My(我的)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,10 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3BA12223D3743A0023E6FF /* ViewController.m in Sources */,
+				3DEC64FE23E066C2006867A6 /* MyTableViewController.m in Sources */,
 				3D3BA11C23D3743A0023E6FF /* AppDelegate.m in Sources */,
 				3D3BA12D23D374410023E6FF /* main.m in Sources */,
+				3DEC650723E066FF006867A6 /* HomeTableViewController.m in Sources */,
+				3DEC650A23E0671F006867A6 /* LoginViewController.m in Sources */,
 				3D3BA11F23D3743A0023E6FF /* SceneDelegate.m in Sources */,
+				3DEC650123E066DE006867A6 /* ServiceTableViewController.m in Sources */,
+				3DEC650423E066F0006867A6 /* QRCodeTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,9 +3,7 @@
 ## 编译环境
 
 * Xcode 11.3.1
-
 * Mac OS 10.15.2
-
 * Objective-C 2.0
 
 ## 简介
@@ -14,7 +12,7 @@
 
 经常与单元测试联系起来的另外一些开发活动包括代码走读（`Code review`），静态分析（`Static analysis`）和动态分析（`Dynamic analysis`）。静态分析就是对软件的源代码进行研读，查找错误或收集一些度量数据，并不需要对代码进行编译和执行。动态分析就是通过观察软件运行时的动作，来提供执行跟踪，时间分析，以及测试覆盖度方面的信息。
 
-XCTest是苹果自带的测试框架。
+XCTest是Xcode提供的一种自动测试框架。
 
 UITests是通过代码化来实现自动点击界面，输入文字等功能。这样解决了大量靠人工操作的测试方式，尤其是需要花费相当多时间的回归测试。
 
@@ -110,9 +108,50 @@ UITests是通过代码化来实现自动点击界面，输入文字等功能。�
 
 ![Code Coverage](https://github.com/wenjiehe/UnitTestsAndUITestsDemo/blob/master/UnitTestsAndUITestsDemo/CodeCoverage.png)
 
+5. Test Plan File
+
+> 测试计划文件实际上就是个JSON文件，以`.xctestplan`为扩展名，它包含你要运行的所有测试，以及描述测试如何运行的所有测试配置
+
+6. 测试报告文件
+
+> 打开访达（`Finder`），输入`Command+shift+G`，输入`~/`，进入`资源库->Developer->Xcode->DerivedData->对应项目->Logs->Test->.xcresult`，`.xcresult`是一个结果捆绑包，包含了`Build`、`Coverage`、`Log`，可以在`Xcode中`直接打开
+
+```
+//使用命令生成结果捆绑包（.xcresult），name和id不能同时使用
+xcodebuild test -project UnitTestsAndUITestsDemo.xcodeproj -scheme UnitTestsAndUITestsDemo -destination 'platform=iOS Simulator,OS=13.3,name=iPhone 11 Pro Max'
+```
+
+7. xcresulttool
+
+> xcresulttool可以访问.xcresult的内容，这是Xcode 11的新命令行工具,提取测试失败
+
+```C
+//在命令行或脚本中使用，输出json格式的数据，ResultBundle.xcresult（传入结果捆绑包的路径）
+xcrun xcresulttool get --path ResultBundle.xcresult --format json
+```
+
+8. xccov
+
+> xccov 是一个全新的用于输出代码覆盖率的命令行工具，可以很方便地集成在脚本中，它能产生对人和对机器都可读的输出，还能输出覆盖数据的详细视图。
+
+```C
+//在命令行中查看测试覆盖率报告
+xcrun xccov view --report xxx.xcresult
+
+//使用diff比较两个报告的测试覆盖率是否有增加或减少
+xcrun xccov diff --json before.xcresult after.xcresult
+```
+
+
 ## XCTest框架及API介绍
 
 ```Objective-C
+//继承于XCUIElement，掌管应用程序的生命周期
+#import <XCTest/XCUIApplication.h>
+//宏定义的断言函数
+#import <XCTest/XCTestAssertions.h>
+
+
 
 ```
 
@@ -123,4 +162,6 @@ UITests是通过代码化来实现自动点击界面，输入文字等功能。�
  [wwdc-2018-关于测试](https://developer.apple.com/videos/play/wwdc2018/403)
 
  [wwdc-2019-XCTest自动测试框架](https://developer.apple.com/videos/play/wwdc2019/413/)
+ 
+ [xcodebuild test](https://developer.apple.com/library/archive/technotes/tn2339/_index.html#//apple_ref/doc/uid/DTS40014588-CH1-UNIT)
  

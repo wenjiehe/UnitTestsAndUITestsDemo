@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "63BC7C28-CBAD-4205-80D5-827984B28A4A",
+      "name" : "Configuration 1",
+      "options" : {
+        "language" : "en",
+        "region" : "CO"
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:UnitTestsAndUITestsDemo.xcodeproj",
+        "identifier" : "3D3BA13123D374410023E6FF",
+        "name" : "UnitTestsAndUITestsDemoTests"
+      }
+    }
+  ],
+  "version" : 1
+}
