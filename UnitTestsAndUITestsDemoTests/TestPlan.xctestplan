@@ -19,6 +19,13 @@
         "identifier" : "3D3BA13123D374410023E6FF",
         "name" : "UnitTestsAndUITestsDemoTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:UnitTestsAndUITestsDemo.xcodeproj",
+        "identifier" : "3D3BA13C23D374410023E6FF",
+        "name" : "UnitTestsAndUITestsDemoUITests"
+      }
     }
   ],
   "version" : 1

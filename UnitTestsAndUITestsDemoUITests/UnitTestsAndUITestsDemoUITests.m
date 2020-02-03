@@ -33,6 +33,7 @@
     //UI测试必须等应用先开启
     XCUIApplication *app = [[XCUIApplication alloc] init];
             [app launch];
+    [[[[[[[XCUIApplication alloc] init].otherElements.statusBars childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:0] tap];
     
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.

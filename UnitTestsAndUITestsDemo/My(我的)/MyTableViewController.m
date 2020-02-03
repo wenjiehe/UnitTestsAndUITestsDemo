@@ -34,6 +34,9 @@
 #pragma mark -- Action
 - (IBAction)rightItemAction:(UIBarButtonItem *)sender {
     NSLog(@"设置");
+    UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIViewController *vc = [mainSB instantiateViewControllerWithIdentifier:@"loginID"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Table view data source

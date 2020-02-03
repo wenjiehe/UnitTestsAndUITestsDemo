@@ -119,6 +119,9 @@ UITests是通过代码化来实现自动点击界面，输入文字等功能。�
 ```
 //使用命令生成结果捆绑包（.xcresult），name和id不能同时使用
 xcodebuild test -project UnitTestsAndUITestsDemo.xcodeproj -scheme UnitTestsAndUITestsDemo -destination 'platform=iOS Simulator,OS=13.3,name=iPhone 11 Pro Max'
+
+//多个设备并行测试
+xcodebuild test -project UnitTestsAndUITestsDemo.xcodeproj -scheme UnitTestsAndUITestsDemo -destination 'platform=iOS Simulator,OS=13.3,name=iPhone 11 Pro Max' -destination 'platform=iOS Simulator,OS=13.3,name=iPhone 8'
 ```
 
 7. xcresulttool
@@ -150,9 +153,6 @@ xcrun xccov diff --json before.xcresult after.xcresult
 #import <XCTest/XCUIApplication.h>
 //宏定义的断言函数
 #import <XCTest/XCTestAssertions.h>
-
-
-
 ```
 
 ## 参考资料
