@@ -12,6 +12,7 @@
 
 @property(nonatomic,strong)NSArray *ary;
 @property(nonatomic,strong)NSArray *detailAry;
+@property(nonatomic,strong)NSArray *imgAry;
 
 @end
 
@@ -28,6 +29,7 @@
     
     self.ary = @[@[@"电子单程票", @"电子储值票"], @[@"我的钱包", @"信用金"], @[@"乘车/购票记录", @"二维码查验", @"乘客留言", @"人工客服", @"关于我们"]];
     self.detailAry = @[@[@"0张", @""], @[@"320000.00元", @"0.00元"], @[@"", @"", @"", @"0731-86850000", @""]];
+    self.imgAry = @[@[@"goupiaoMine", @"chengcheMine"], @[@"wdqb", @"wo_xyj"], @[@"fw_pjb", @"wo-ycpcl", @"wo-yjfk", @"wo-gywm", @"wo-gywm"]];
 
 }
 
@@ -55,7 +57,8 @@
     // Configure the cell...
     NSArray *ary = self.ary[indexPath.section];
     NSArray *detailAry = self.detailAry[indexPath.section];
-    cell.imageView.image = [UIImage systemImageNamed:@"timelapse"];
+    NSArray *imgA = self.imgAry[indexPath.section];
+    cell.imageView.image = [UIImage imageNamed:imgA[indexPath.row]];
     cell.textLabel.text = ary[indexPath.row];
     cell.detailTextLabel.text = detailAry[indexPath.row];
     

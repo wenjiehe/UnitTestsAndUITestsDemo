@@ -7,8 +7,13 @@
 //
 
 #import "HomeTableViewController.h"
+#import "HomeCollectionViewCell.h"
 
 @interface HomeTableViewController ()
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property(nonatomic,strong)NSArray *titleAry;
+@property(nonatomic,strong)NSArray *imgAry;
 
 @end
 
@@ -22,28 +27,18 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.collectionView registerClass:[HomeCollectionViewCell class] forCellWithReuseIdentifier:@"collIdentifier"];
+    
+    self.titleAry = @[@"购单程票", @"乘地铁", @"坐公交", @"帮助"];
+    self.imgAry = @[@"goupiao", @"chengche", @"chenggongjiao", @"bangzhu"];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 #pragma mark -- Action
-//购单程票
-- (IBAction)ticketAction:(UITapGestureRecognizer *)sender {
-    NSLog(@"购单程票");
-}
-
-//乘地铁
-- (IBAction)metroAction:(UITapGestureRecognizer *)sender {
-    NSLog(@"乘地铁");
-}
-
-//坐公交
-- (IBAction)transitAction:(UITapGestureRecognizer *)sender {
-    NSLog(@"坐公交");
-}
-
-//帮助
-- (IBAction)helpAction:(UITapGestureRecognizer *)sender {
-    NSLog(@"帮助");
-}
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -70,6 +65,27 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%ld", indexPath.row);
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    HomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collIdentifier" forIndexPath:indexPath];
+//    cell.imgView.image = [UIImage imageNamed:self.imgAry[indexPath.row]];
+//    cell.tleLabel.text = self.titleAry[indexPath.row];
+    cell.backgroundColor = [UIColor redColor];
+    
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(85, 150);
 }
 
 

@@ -10,7 +10,7 @@
 
 @interface ServiceTableViewController ()
 
-@property(nonatomic,strong)NSArray *systemImageTitleAry;
+@property(nonatomic,strong)NSArray *imageTitleAry;
 @property(nonatomic,strong)NSArray *titleAry;
 
 @end
@@ -26,7 +26,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.systemImageTitleAry = @[@"timelapse"];
+    self.imageTitleAry = @[@"chengcheMine", @"fw_pjb", @"fw_smbcskb", @"fw_zdxq", @"fw_zdxq"];
     self.titleAry = @[@"长沙地铁线网图", @"票价表", @"首末班车时刻表", @"站点详情", @"使用帮助"];
 }
 
@@ -39,7 +39,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"serviceCellIdentifier" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.imageView.image = [UIImage systemImageNamed:self.systemImageTitleAry[0]];
+    cell.imageView.image = [UIImage imageNamed:self.imageTitleAry[indexPath.row]];
     cell.textLabel.text = self.titleAry[indexPath.row];
     cell.detailTextLabel.text = @"";
     

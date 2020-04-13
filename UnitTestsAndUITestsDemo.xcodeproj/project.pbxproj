@@ -15,6 +15,7 @@
 		3D3BA12D23D374410023E6FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA12C23D374410023E6FF /* main.m */; };
 		3D3BA13723D374410023E6FF /* UnitTestsAndUITestsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA13623D374410023E6FF /* UnitTestsAndUITestsDemoTests.m */; };
 		3D3BA14223D374410023E6FF /* UnitTestsAndUITestsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BA14123D374410023E6FF /* UnitTestsAndUITestsDemoUITests.m */; };
+		3D5151EE2444DA9A00C95CC6 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5151ED2444DA9A00C95CC6 /* HomeCollectionViewCell.m */; };
 		3DA0999123E16EEC00DEB1D8 /* HomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA0999023E16EEC00DEB1D8 /* HomeTests.m */; };
 		3DA0999323E172B800DEB1D8 /* ToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA0999223E172B800DEB1D8 /* ToolTests.m */; };
 		3DEC64F523E03FF3006867A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DEC64F223DEF0A8006867A6 /* XCTest.framework */; };
@@ -60,6 +61,8 @@
 		3D3BA13D23D374410023E6FF /* UnitTestsAndUITestsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestsAndUITestsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3BA14123D374410023E6FF /* UnitTestsAndUITestsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTestsAndUITestsDemoUITests.m; sourceTree = "<group>"; };
 		3D3BA14323D374410023E6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D5151EC2444DA9A00C95CC6 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		3D5151ED2444DA9A00C95CC6 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
 		3DA0999023E16EEC00DEB1D8 /* HomeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTests.m; sourceTree = "<group>"; };
 		3DA0999223E172B800DEB1D8 /* ToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolTests.m; sourceTree = "<group>"; };
 		3DEC64F223DEF0A8006867A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -170,6 +173,15 @@
 			path = UnitTestsAndUITestsDemoUITests;
 			sourceTree = "<group>";
 		};
+		3D5151EB2444DA7E00C95CC6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3D5151EC2444DA9A00C95CC6 /* HomeCollectionViewCell.h */,
+				3D5151ED2444DA9A00C95CC6 /* HomeCollectionViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3DA0998B23E16EDB00DEB1D8 /* Login(登录) */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +247,7 @@
 		3DEC64F923E066A1006867A6 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				3D5151EB2444DA7E00C95CC6 /* Cell */,
 				3DEC650523E066FF006867A6 /* HomeTableViewController.h */,
 				3DEC650623E066FF006867A6 /* HomeTableViewController.m */,
 			);
@@ -397,6 +410,7 @@
 				3D3BA11F23D3743A0023E6FF /* SceneDelegate.m in Sources */,
 				3DEC650123E066DE006867A6 /* ServiceTableViewController.m in Sources */,
 				3DEC650423E066F0006867A6 /* QRCodeTableViewController.m in Sources */,
+				3D5151EE2444DA9A00C95CC6 /* HomeCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +589,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hewenjie.com.UnitTestsAndUITestsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -591,7 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hewenjie.com.UnitTestsAndUITestsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
