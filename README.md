@@ -150,10 +150,13 @@ xcrun xccov diff --json before.xcresult after.xcresult
 > measureBlock中会对代码运行10次，得到10次运行的时间，及平均值、相对标准偏差，基线平均值等
 
 ![性能测试](https://github.com/wenjiehe/UnitTestsAndUITestsDemo/blob/master/UnitTestsAndUITestsDemo/ceshi.png)
+
 ![性能测试输出](https://github.com/wenjiehe/UnitTestsAndUITestsDemo/blob/master/UnitTestsAndUITestsDemo/ceshi1.png)
 
 Average: 平均值
+
 Baseline: 基线值
+
 Max STDDEV:最大标准偏差
 
 
