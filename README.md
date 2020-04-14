@@ -145,6 +145,16 @@ xcrun xccov view --report xxx.xcresult
 xcrun xccov diff --json before.xcresult after.xcresult
 ```
 
+9. 性能测试报告
+
+> measureBlock中会对代码运行10次，得到10次运行的时间，及平均值、相对标准偏差，基线平均值等
+
+![性能测试](https://github.com/wenjiehe/UnitTestsAndUITestsDemo/blob/master/UnitTestsAndUITestsDemo/ceshi.png)
+
+Average: 平均值
+Baseline: 基线值
+Max STDDEV:最大标准偏差
+
 
 ## XCTest框架及API介绍
 

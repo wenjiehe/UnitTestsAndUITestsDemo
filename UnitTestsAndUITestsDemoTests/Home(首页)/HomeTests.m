@@ -10,6 +10,8 @@
 
 @interface HomeTests : XCTestCase
 
+@property(nonatomic)NSInteger k;
+
 @end
 
 @implementation HomeTests
@@ -31,9 +33,15 @@
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
-        for (NSInteger i = 0; i < 100000; i++) {
+        BOOL isStart = NO;
+        for (NSInteger i = 0; i < 10000; i++) {
+            if (!isStart) {
+                isStart = YES;
+                _k++;
+            }
             NSLog(@"%ld", i);
         }
+        NSLog(@"kkkkk = %ld", _k);
     }];
 }
 

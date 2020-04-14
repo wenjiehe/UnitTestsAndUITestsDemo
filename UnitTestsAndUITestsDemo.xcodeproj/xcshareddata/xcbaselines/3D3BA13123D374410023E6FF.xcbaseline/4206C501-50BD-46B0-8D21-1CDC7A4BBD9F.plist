@@ -15,7 +15,7 @@
 					<key>baselineIntegrationDisplayName</key>
 					<string>Local Baseline</string>
 					<key>maxPercentRelativeStandardDeviation</key>
-					<real>60</real>
+					<real>10</real>
 				</dict>
 			</dict>
 		</dict>
