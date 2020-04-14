@@ -27,6 +27,16 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    //用代码生成的控件，使用以下方式获取控件:
+////    XCUIElement *tableView = [app.tables elementBoundByIndex:0];
+//    //使用storyboard生成的控件，使用以下方式获取控件:
+//    XCUIElement *tableView = app.tables[@"tablev"];
+//    if (tableView.tableRows.count > 0) {
+//        XCUIElement *tableViewCell = [tableView.tableRows elementBoundByIndex:0];
+//
+//    }
+    
 }
 
 - (void)testPerformanceExample {
