@@ -11,13 +11,13 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="loginID" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginID" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-YQ-S6k">
-                                <rect key="frame" x="48" y="353" width="318" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-YQ-S6k">
+                                <rect key="frame" x="48" y="309" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="efi-Ee-tNi"/>
                                 </constraints>
@@ -25,7 +25,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGo-E5-D6B">
-                                <rect key="frame" x="48" y="509" width="318" height="50"/>
+                                <rect key="frame" x="48" y="465" width="318" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ug1-TZ-nKu"/>
@@ -34,14 +34,24 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-vE-pnC">
-                                <rect key="frame" x="48" y="263" width="320" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-vE-pnC">
+                                <rect key="frame" x="48" y="219" width="320" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WdX-eR-1FS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WR4-An-ahH">
+                                <rect key="frame" x="170" y="96" width="74" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="bBu-tz-aTl"/>
+                                    <constraint firstAttribute="height" constant="44" id="dJn-bA-Ljl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -49,18 +59,21 @@
                             <constraint firstItem="ewK-Ze-3hw" firstAttribute="trailing" secondItem="5KM-vE-pnC" secondAttribute="trailing" constant="46" id="9RO-rb-yGQ"/>
                             <constraint firstItem="ewK-Ze-3hw" firstAttribute="trailing" secondItem="eGo-E5-D6B" secondAttribute="trailing" constant="48" id="FmZ-dV-K9c"/>
                             <constraint firstItem="5KM-vE-pnC" firstAttribute="top" secondItem="ewK-Ze-3hw" secondAttribute="top" constant="219" id="HZu-fW-n7C"/>
+                            <constraint firstItem="WR4-An-ahH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mv7-Mp-jyx"/>
                             <constraint firstItem="HYe-YQ-S6k" firstAttribute="leading" secondItem="ewK-Ze-3hw" secondAttribute="leading" constant="48" id="VPQ-t8-pWV"/>
                             <constraint firstItem="eGo-E5-D6B" firstAttribute="leading" secondItem="ewK-Ze-3hw" secondAttribute="leading" constant="48" id="Xk7-Kp-vNR"/>
                             <constraint firstItem="HYe-YQ-S6k" firstAttribute="top" secondItem="5KM-vE-pnC" secondAttribute="bottom" constant="40" id="bIR-HF-RwJ"/>
                             <constraint firstItem="5KM-vE-pnC" firstAttribute="leading" secondItem="ewK-Ze-3hw" secondAttribute="leading" constant="48" id="n9Y-0a-dfh"/>
+                            <constraint firstItem="WR4-An-ahH" firstAttribute="top" secondItem="ewK-Ze-3hw" secondAttribute="top" constant="96" id="qSG-pZ-Ppu"/>
                             <constraint firstItem="ewK-Ze-3hw" firstAttribute="trailing" secondItem="HYe-YQ-S6k" secondAttribute="trailing" constant="48" id="qhb-Nb-eKx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ewK-Ze-3hw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Txk-Kn-eqJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-597.10144927536237" y="218.97321428571428"/>
+            <point key="canvasLocation" x="-330" y="325"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y2c-0D-NuZ">
@@ -207,7 +220,7 @@
                         <barButtonItem key="rightBarButtonItem" title="设置" style="done" id="gib-dh-fNj">
                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="rightItemAction:" destination="PHZ-gj-4Uc" id="Jpu-Rw-HNn"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Ywh-hc-dGH"/>
                             </connections>
                         </barButtonItem>
                         <connections>
